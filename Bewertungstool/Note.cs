@@ -76,7 +76,7 @@ namespace Bewertungstool
             {
                 switch (Prozent)
                 {
-                    case <= 0.2:  return "ungenügend";
+                    case <= 0.2:  return "ungenuegend";
                     case <= 0.26: return "mangelhaft";
                     case <= 0.33: return "mangelhaft";
                     case <= 0.39: return "mangelhaft";
