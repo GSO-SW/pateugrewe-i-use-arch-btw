@@ -7,8 +7,15 @@ namespace Bewertungstool
         
         public Note(int moeglichePunkte, int erreichtePunkte)
         {
-            this.moeglichePunkte = moeglichePunkte;
-            this.erreichtePunkte = erreichtePunkte;
+            if (moeglichePunkte > erreichtePunkte)
+            {
+                this.moeglichePunkte = moeglichePunkte;
+                this.erreichtePunkte = erreichtePunkte;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
         }
 
         public int MoeglichePunkte { get { return moeglichePunkte; } }

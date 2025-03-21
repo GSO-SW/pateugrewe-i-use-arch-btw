@@ -36,5 +36,17 @@ namespace BewertungstoolTests
             Assert.AreEqual(kurz_ergebnis, n.Kurz);
             Assert.AreEqual(lang_ergebnis, n.Lang);
         }
+        
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Note_MehrPunkteErreichtAlsMax()
+        {
+            // Arrange
+            int maxPoints = 100;
+            int erreichtePoints = 120;
+            // Act
+            Note n = new Note(maxPoints, erreichtePoints);
+            
+        }
     }
 }
